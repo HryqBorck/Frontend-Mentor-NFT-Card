@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+html body {
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+.card {
+  background-color: var(--bg-card-color);
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 340px;
+}
+
+.card .card-container img {
+  width: 290px;
+  border-radius: 7px;
+}
+.card .card-container .img-link{
+  position: relative;
+}
+.card .card-container .img-link::before {
+  content: '';
+  background-color: cyan;
+  border-radius: 10px;
+  width: 100%;
+  height: 290px;
+  position: absolute;
+  opacity: 0.4;
+  display: none;
+}
+
+.card .card-container .img-link::after{
+  content: '';
+  background: url(../images/icon-view.svg) no-repeat center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transform: translateY(-100%);
+}
+
+.card .card-container .img-link:hover::before,
+.card .card-container .img-link:hover::after{
+  display: block;
+}
+.card .card-container .card-description h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.card .card-container .card-description h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card .card-container .paragraph {
+  color: hsl(215, 51%, 70%);
+  font-weight: 200;
+}
+
+.card .card-container .card-description .cripto-description {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.card .card-container .card-description .cripto-description .value {
+  color: hsl(178, 100%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.card .card-container .card-description .cripto-description .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.card-description .cripto-description .value img {
+  width: 10px;
+}
+
+.card-description .cripto-description .date img {
+  width: 15px;
+}
+
+.card .card-container .card-description .user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.card .card-container .card-description .user strong{
+  color: hsl(0, 0%, 100%);
+}
+
+.card .card-container .card-description .user strong:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card .card-container .card-description .user img {
+  width: 30px;
+  border-radius: 50px;
+  border: solid 1.5px hsl(0, 0%, 100%);
+}
+
+@media (max-width: 370px) {
+  .card {
+    max-width: 300px;
+  }
+
+  .card .card-container img {
+    width: 260px;
+  }
+}
